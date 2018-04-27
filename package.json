@@ -1,6 +1,6 @@
 {
   "name": "gluon-font-awesome",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Font Awesome as a Web Component",
   "main": "fontAwesome.js",
   "module": "fontAwesome.js",
