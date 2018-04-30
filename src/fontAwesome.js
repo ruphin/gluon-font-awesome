@@ -10,7 +10,7 @@ const styleText = document.createTextNode(`
     font-family: Font Awesome\\ 5 Brands;
     font-style: normal;
     font-weight: 400;
-    src: urlhttps://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.eot);
+    src: url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.eot);
     src: url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.eot?#iefix) format('embedded-opentype'), url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.woff2) format('woff2'),
       url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.woff) format('woff'), url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.ttf) format('truetype'),
       url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.svg#fontawesome) format('svg');
@@ -55,7 +55,6 @@ class FontAwesome extends GluonElement {
   }
 
   attributeChangedCallback(attr, oldVal, newVal) {
-    console.log('CHANGED');
     if (attr == 'icon') {
       this.render();
     }
