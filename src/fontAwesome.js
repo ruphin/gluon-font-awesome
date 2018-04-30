@@ -1,5 +1,8 @@
 import { html, GluonElement } from '../node_modules/gluonjs/gluon.js';
 
+const webfontsPath = 'https://use.fontawesome.com/releases/v5.0.10/webfonts/';
+const cssPath = 'https://use.fontawesome.com/releases/v5.0.10/css/all.css';
+
 // We have to place @font-face definitions in the global space. This is the CSS text for the @font-face definitions.
 const styleText = document.createTextNode(`
   /*!
@@ -10,28 +13,28 @@ const styleText = document.createTextNode(`
     font-family: Font Awesome\\ 5 Brands;
     font-style: normal;
     font-weight: 400;
-    src: urlhttps://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.eot);
-    src: url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.eot?#iefix) format('embedded-opentype'), url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.woff2) format('woff2'),
-      url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.woff) format('woff'), url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.ttf) format('truetype'),
-      url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-brands-400.svg#fontawesome) format('svg');
+    src: url(${webfontsPath}fa-brands-400.eot);
+    src: url(${webfontsPath}fa-brands-400.eot?#iefix) format('embedded-opentype'), url(${webfontsPath}fa-brands-400.woff2) format('woff2'),
+      url(${webfontsPath}fa-brands-400.woff) format('woff'), url(fonts/font-awesome/fa-brands-400.ttf) format('truetype'),
+      url(${webfontsPath}fa-brands-400.svg#fontawesome) format('svg');
   }
   @font-face {
     font-family: Font Awesome\\ 5 Free;
     font-style: normal;
     font-weight: 400;
-    src: url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-regular-400.eot);
-    src: url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-regular-400.eot?#iefix) format('embedded-opentype'), url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-regular-400.woff2) format('woff2'),
-      url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-regular-400.woff) format('woff'), url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-regular-400.ttf) format('truetype'),
-      url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-regular-400.svg#fontawesome) format('svg');
+    src: url(${webfontsPath}fa-regular-400.eot);
+    src: url(${webfontsPath}fa-regular-400.eot?#iefix) format('embedded-opentype'), url(${webfontsPath}fa-regular-400.woff2) format('woff2'),
+      url(${webfontsPath}fa-regular-400.woff) format('woff'), url(${webfontsPath}fa-regular-400.ttf) format('truetype'),
+      url(${webfontsPath}fa-regular-400.svg#fontawesome) format('svg');
   }
   @font-face {
     font-family: Font Awesome\\ 5 Free;
     font-style: normal;
     font-weight: 900;
-    src: url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-solid-900.eot);
-    src: url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-solid-900.eot?#iefix) format('embedded-opentype'), url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-solid-900.woff2) format('woff2'),
-      url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-solid-900.woff) format('woff'), url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-solid-900.ttf) format('truetype'),
-      url(https://use.fontawesome.com/releases/v5.0.10/webfonts/fa-solid-900.svg#fontawesome) format('svg');
+    src: url(${webfontsPath}fa-solid-900.eot);
+    src: url(${webfontsPath}fa-solid-900.eot?#iefix) format('embedded-opentype'), url(${webfontsPath}fa-solid-900.woff2) format('woff2'),
+      url(${webfontsPath}fa-solid-900.woff) format('woff'), url(${webfontsPath}fa-solid-900.ttf) format('truetype'),
+      url(${webfontsPath}fa-solid-900.svg#fontawesome) format('svg');
   }
 `);
 
@@ -44,7 +47,7 @@ document.head.appendChild(style);
 class FontAwesome extends GluonElement {
   get template() {
     return html`
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+      <link rel="stylesheet" href="${cssPath}" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
       <i id="icon" class$=${this.icon}></i>
     `;
   }
@@ -55,7 +58,6 @@ class FontAwesome extends GluonElement {
   }
 
   attributeChangedCallback(attr, oldVal, newVal) {
-    console.log('CHANGED');
     if (attr == 'icon') {
       this.render();
     }
