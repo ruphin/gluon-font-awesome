@@ -1,4 +1,4 @@
-import { html, GluonElement } from '../node_modules/gluonjs/gluon.js';
+import { html, GluonElement } from '../node_modules/@gluon/gluon/gluon.js';
 
 const webfontsPath = 'https://use.fontawesome.com/releases/v5.0.10/webfonts/';
 const cssPath = 'https://use.fontawesome.com/releases/v5.0.10/css/all.css';

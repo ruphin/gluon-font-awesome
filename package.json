@@ -1,5 +1,5 @@
 {
-  "name": "gluon-font-awesome",
+  "name": "@gluon/font-awesome",
   "version": "0.1.1",
   "description": "Font Awesome as a Web Component",
   "main": "fontAwesome.js",
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/ruphin/gluon-font-awesome",
   "dependencies": {
-    "gluonjs": "^2.2.2"
+    "@gluon/gluon": "^2.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
