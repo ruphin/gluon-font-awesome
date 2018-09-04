@@ -2,11 +2,11 @@
   "name": "@gluon/font-awesome",
   "version": "0.1.1",
   "description": "Font Awesome as a Web Component",
-  "main": "fontAwesome.js",
-  "module": "fontAwesome.js",
-  "jsnext:main": "fontAwesome.js",
+  "main": "font-awesome.js",
+  "module": "font-awesome.js",
+  "jsnext:main": "font-awesome.js",
   "files": [
-    "fontAwesome.js"
+    "font-awesome.js"
   ],
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "url": "https://github.com/ruphin/gluon-font-awesome/issues"
   },
   "scripts": {
-    "build": "rollup -c && cp src/fontAwesome.js .",
+    "build": "rollup -c && cp src/font-awesome.js .",
     "dev": "browser-sync start --config browsersync.config.js",
     "release": "np"
   },
@@ -31,13 +31,13 @@
     "@gluon/gluon": "^2.4.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
     "np": "^2.20.1",
     "rollup": "^0.55.1",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-includepaths": "^0.2.2"
+    "rollup-plugin-babel": "^3.0.3"
   }
 }

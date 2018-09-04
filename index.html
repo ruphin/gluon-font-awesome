@@ -1,18 +1,30 @@
-<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+<!DOCTYPE html>
 
+<!-- This set of polyfills will make webcomponents work on any browser -->
+<script nomodule src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
 <script>if (window.customElements) { document.write('<!--'); }</script>
-<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/custom-elements-es5-adapter.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
+<script nomodule src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.1/custom-elements-es5-adapter.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.1/webcomponents-bundle.js"></script>
 <!--! do not remove -->
 
-<script type="module" src="./src/fontAwesome.js"></script>
-<script nomodule src="./fontAwesome.nomodule.js"></script>
+<script>window.FontAwesome = { path: '/node_modules/@fortawesome/fontawesome-free' };</script>
+
+<!-- Load the module version of the element in modern browsers -->
+<script type="module" src="./src/font-awesome.js"></script>
+<!-- Load the bundled version of the element in IE11 -->
+<script nomodule src="./font-awesome.nomodule.js"></script>
+
 
 <pre><code id="code"></code></pre>
+<div id="container"></div>
 <script>
-  document.getElementById('code').innerText = `<font-awesome icon="fas fa-camera-retro fa-7x"></font-awesome>`;
+  const example = '<font-awesome icon="fas fa-camera-retro fa-7x"></font-awesome>';
+  document.getElementById('code').innerText = example;
+  document.getElementById('container').innerHTML = example;
 </script>
 
-<font-awesome icon="fas fa-camera-retro fa-7x"></font-awesome>
+<p>Take a
+  <font-awesome icon="fas fa-camera-retro fa-1x"></font-awesome> picture, it'll last longer
+</p>
 
 <span id="browser-sync-binding"></span>
