@@ -66,8 +66,18 @@ npm install @gluon/font-awesome
 
 ## Compatibility
 
-Works on all modern browsers, and IE11. May require some polyfills and/or bundling.
-See `rollup.config.js` and `index.html` for example bundling and polyfill usage.
+Works on all modern browsers. The module imports `@gluon/gluon` with a bare specifier, so use a bundler
+(such as Vite) or an import map when loading it directly in the browser.
+
+## Development
+
+```bash
+npm install
+npm run dev      # start the Vite dev server with the demo page (index.html)
+npm run build    # build font-awesome.js (Vite library mode)
+npm test         # run tests with Vitest
+npm run release  # build and publish a new version with np
+```
 
 ## License
 

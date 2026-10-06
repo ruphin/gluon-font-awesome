@@ -1,4 +1,4 @@
-import { html, GluonElement } from '../node_modules/@gluon/gluon/gluon.js';
+import { html, GluonElement } from '@gluon/gluon';
 
 const fontAwesomeVersion = 'v5.3.1';
 
